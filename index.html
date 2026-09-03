@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breakout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <div class="hud">
+        <div>
+          <span class="label">Score</span>
+          <span id="score">0</span>
+        </div>
+        <div>
+          <span class="label">Lives</span>
+          <span id="lives">3</span>
+        </div>
+        <div>
+          <span class="label">Coins</span>
+          <span id="coins">0</span>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="800" height="600" aria-label="Breakout game"></canvas>
+
+      <section class="level-panel" aria-labelledby="level-heading">
+        <div>
+          <span class="section-label" id="level-heading">Choose a level</span>
+          <select id="levelSelect" aria-label="Choose a level"></select>
+        </div>
+        <div class="shop">
+          <div>
+            <span class="section-label">Level shop</span>
+            <span class="shop-copy">Extra ball: <strong id="ballCost">25</strong> coins</span>
+          </div>
+          <button id="buyBallButton" type="button">Buy Ball (E)</button>
+        </div>
+        <p class="shop-status" id="shopStatus" role="status" aria-live="polite"></p>
+      </section>
+
+      <div class="controls">
+        <button id="startButton" type="button">Start Game</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
